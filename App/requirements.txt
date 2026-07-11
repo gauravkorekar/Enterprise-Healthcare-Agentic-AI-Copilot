@@ -1,0 +1,63 @@
+# =========================
+# Core Backend
+# =========================
+fastapi
+uvicorn[standard]
+python-multipart
+
+# =========================
+# LLM
+# =========================
+groq
+python-dotenv
+
+# =========================
+# RAG Core
+# =========================
+sentence-transformers
+faiss-cpu
+
+# =========================
+# LangChain
+# =========================
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+
+# =========================
+# Document Processing
+# =========================
+pypdf
+python-docx
+docx2txt
+
+# =========================
+# Data Handling
+# =========================
+numpy
+pandas
+
+# =========================
+# Frontend
+# =========================
+streamlit
+requests
+
+# =========================
+# Database
+# =========================
+psycopg2-binary
+mcp
+
+# =========================
+# OCR & Image Processing
+# =========================
+easyocr
+Pillow
+opencv-python-headless
+
+# =========================
+# Dashboard
+# =========================
+plotly

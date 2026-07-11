@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: mediassist-backend
+    env: docker
+    dockerfilePath: ./Dockerfile.backend
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: DB_NAME
+        value: defaultdb
+      - key: DB_HOST
+        value: medi-assist-db-ankit-d5d7.g.aivencloud.com
+      - key: DB_PORT
+        value: "19930"
+      - key: DB_USER
+        value: avnadmin
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSLMODE
+        value: require
+
+  - type: web
+    name: mediassist-frontend
+    env: docker
+    dockerfilePath: ./Dockerfile.frontend
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: BACKEND_URL
+        value: https://mediassist-backend.onrender.com
